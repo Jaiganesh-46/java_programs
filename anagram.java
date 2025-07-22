@@ -22,6 +22,6 @@ public class anagram {
             }
         }
         System.out.println("The strings are anagrams.");
-        
+
     }
 }
