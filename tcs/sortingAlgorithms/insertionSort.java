@@ -1,8 +1,8 @@
 package sortingAlgorithms;
 
-import java.util.Scanner;
+import java.util.*;
 
-public class insertionSort {
+public class InsertionSort {
     
     public static void sort(int[] arr) {
         int n = arr.length;
@@ -12,15 +12,15 @@ public class insertionSort {
             
             while (j >= 0 && arr[j] > key) {
                 arr[j + 1] = arr[j];
-                j = j - 1;
+                j--;
             }
             arr[j + 1] = key;
         }
     }
     
     public static void printArray(int[] arr) {
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
+        for (int num : arr) {
+            System.out.print(num + " ");
         }
         System.out.println();
     }
@@ -45,5 +45,6 @@ public class insertionSort {
         System.out.println("Sorted array:");
         printArray(arr);
         
+        scanner.close();
     }
 }
