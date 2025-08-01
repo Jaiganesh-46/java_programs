@@ -2,7 +2,7 @@ package sortingAlgorithms;
 
 import java.util.*;
 
-public class InsertionSort {
+public class insertionSort {
     
     public static void sort(int[] arr) {
         int n = arr.length;
@@ -12,15 +12,15 @@ public class InsertionSort {
             
             while (j >= 0 && arr[j] > key) {
                 arr[j + 1] = arr[j];
-                j--;
+                j = j - 1;
             }
             arr[j + 1] = key;
         }
     }
     
     public static void printArray(int[] arr) {
-        for (int num : arr) {
-            System.out.print(num + " ");
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
         }
         System.out.println();
     }
@@ -45,6 +45,5 @@ public class InsertionSort {
         System.out.println("Sorted array:");
         printArray(arr);
         
-        scanner.close();
     }
 }
