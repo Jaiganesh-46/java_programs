@@ -1,5 +1,6 @@
 package sortingAlgorithms;
 
+
 public class mergeSort {
     
     public static void mergeSort(int[] arr, int left, int right) {
@@ -61,7 +62,17 @@ public class mergeSort {
     }
     
     public static void main(String[] args) {
-        int[] arr = {64, 34, 25, 12, 22, 11, 90};
+        java.util.Scanner scanner = new java.util.Scanner(System.in);
+        
+        System.out.print("Enter the number of elements: ");
+        int n = scanner.nextInt();
+        
+        int[] arr = new int[n];
+        
+        System.out.println("Enter " + n + " elements:");
+        for (int i = 0; i < n; i++) {
+            arr[i] = scanner.nextInt();
+        }
         
         System.out.println("Original array:");
         printArray(arr);
@@ -70,5 +81,7 @@ public class mergeSort {
         
         System.out.println("Sorted array:");
         printArray(arr);
+        
+        scanner.close();
     }
 }
