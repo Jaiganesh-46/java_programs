@@ -1,6 +1,5 @@
 package problemsOnStrings;
 
-
 import java.util.*;
 public class removeVowels {
     public static void main(String[] args) {
