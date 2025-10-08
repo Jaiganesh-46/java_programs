@@ -1,3 +1,5 @@
+package numberProblems;
+
 import java.util.*;
 public class digitalPyramidSum {
     public static void main(String[] args) {

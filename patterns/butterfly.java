@@ -1,3 +1,5 @@
+package patterns;
+
 import java.util.*;
 public class butterfly {
     public static void main(String[] args) {

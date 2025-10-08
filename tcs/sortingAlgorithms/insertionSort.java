@@ -1,4 +1,4 @@
-package sortingAlgorithms;
+package tcs.sortingAlgorithms;
 
 import java.util.*;
 

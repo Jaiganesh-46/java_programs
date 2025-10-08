@@ -1,3 +1,5 @@
+package patterns;
+
 import java.util.*;
 public class rightangledtri {
     public static void main(String[] args) {

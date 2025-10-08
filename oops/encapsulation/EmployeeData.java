@@ -1,3 +1,5 @@
+package oops.encapsulation;
+
 // EmployeeData.java
 public class EmployeeData {
     private final String name;

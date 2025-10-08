@@ -1,4 +1,4 @@
-package problemsOnStrings;
+package tcs.problemsOnStrings;
 
 import java.util.*;
 public class Cap1andlastCharofEachWord {

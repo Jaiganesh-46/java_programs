@@ -1,3 +1,5 @@
+package oops.classAndObjects;
+
 public class StudentRecord {
     String name;
     int rollNo;

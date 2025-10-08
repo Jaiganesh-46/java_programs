@@ -1,3 +1,5 @@
+package numberProblems;
+
 import java.util.*;
 public class armstrongNumber {
     public static void main(String[] args) {

@@ -1,3 +1,5 @@
+package numberProblems;
+
 import java.util.*;
 public class perfectNumber {
     public static void main(String[] args) {
