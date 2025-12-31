@@ -1,3 +1,4 @@
+package tcs.problemsOnStrings;
 
 import java.util.*;
 public class anagram {
@@ -15,9 +16,7 @@ public class anagram {
         }
         for (char ch : str2.toCharArray()) {
             charCount[ch - 'a']--;
-        }
-        for (int count : charCount) {
-            if (count != 0) {
+            if (charCount[ch - 'a'] < 0) {
                 System.out.println("The strings are not anagrams.");
                 return;
             }

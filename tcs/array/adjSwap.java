@@ -1,3 +1,4 @@
+package tcs.array;
 import java.util.*;
 public class adjSwap {
     public static void main(String[] args) {
