@@ -1,52 +1,50 @@
 package tcs.array;
 import java.util.*;
+
 public class sortByFreq {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+
         int n = sc.nextInt();
         int arr[] = new int[n];
-        for(int i = 0; i < n; i++) {
+        int freq[] = new int[n];
+        boolean counted[] = new boolean[n];
+
+        for (int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
         }
-        int freq[] = new int[n];
-        boolean visited[] = new boolean[n];
-        for(int i = 0; i < n; i++) {
-            if(visited[i]) {
-                continue;
-            }
+
+        // Step 1: Count frequency
+        for (int i = 0; i < n; i++) {
+            if (counted[i]) continue;
+
             int count = 1;
-            for(int j = i+1; j < n; j++) {
-                if(arr[i] == arr[j]) {
+            for (int j = i + 1; j < n; j++) {
+                if (arr[i] == arr[j]) {
                     count++;
-                    visited[j] = true;
+                    counted[j] = true;
                 }
             }
             freq[i] = count;
         }
 
-        for(int i = 0; i < n; i++) {
-            int maxIndex = i;
-            for(int j = i+1; j < n; j++) {
-                if(freq[j] > freq[maxIndex]) {
-                    maxIndex = j;
+        // Step 2: Find max frequency
+        int maxFreq = 0;
+        for (int i = 0; i < n; i++) {
+            if (freq[i] > maxFreq) {
+                maxFreq = freq[i];
+            }
+        }
+
+        // Step 3: Print by frequency
+        for (int f = maxFreq; f >= 1; f--) {
+            for (int i = 0; i < n; i++) {
+                if (freq[i] == f) {
+                    for (int k = 0; k < f; k++) {
+                        System.out.print(arr[i] + " ");
+                    }
                 }
             }
-            int temp = freq[i];
-            freq[i] = freq[maxIndex];
-            freq[maxIndex] = temp;
-
-            int tempArr = arr[i];
-        arr[i] = arr[maxIndex];
-        arr[maxIndex] = tempArr;
-        }
-        
-    
-    for(int i = 0; i < n; i++) {
-        if(freq[i] > 0) {
-            for(int j = 0; j < freq[i]; j++) {
-                System.out.print(arr[i] + " ");
-            }
-        }
         }
     }
 }
