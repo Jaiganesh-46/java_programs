@@ -19,7 +19,7 @@ Output
 
 import java.util.*;
 
-public class s1 {
+public class noToHexadecimal {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String n = sc.nextLine();
